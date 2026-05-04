@@ -20,7 +20,7 @@ Follow these steps to set up the project locally:
 
 1. Clone the Repository
 bash
-git clone https://github.com/your-username/somnath-temple-digital.git
+git clone [https://github.com/your-username/somnath-temple-digital.git](https://github.com/Aayush8113/somnath-temple)
 2. Navigate to Project Directory
 bash
 cd somnath-temple-digital
