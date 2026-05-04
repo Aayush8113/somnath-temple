@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Somnath — Experience Eternal Energy | First Jyotirlinga</title>
+
+    <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Noto+Sans+Devanagari:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+
+  <body>
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
+
+    <div
+      id="preloader"
+      role="status"
+      aria-label="Loading Somnath Temple"
+    >
+      <div
+        id="jyotirling-container"
+        class="absolute inset-0 z-0 flex items-center justify-center scale-110 opacity-0"
+      >
+        <img
+          src="/images/authentic_jyotirlinga.png"
+          alt="Somnath Jyotirling Temple"
+          class="w-full h-full object-cover max-w-4xl max-h-screen object-center shadow-[0_0_100px_rgba(255,165,0,0.8)] rounded-xl"
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black opacity-80"
+        ></div>
+      </div>
+
+      <div id="preloader-light"></div>
+
+      <div id="preloader-reveal">
+        <div class="om" aria-hidden="true">ॐ</div>
+        <div class="subtitle">Somnath — Jyotirlinga of Bharat</div>
+      </div>
+
+      <div class="door-wrap">
+        <div
+          id="door-left"
+          class="door-panel door-left absolute top-0 left-0 w-1/2 h-full z-10 flex justify-end items-center border-r-[4px] border-[#78350f]/50"
+        >
+          <div
+            class="h-3/4 w-16 border-l-2 border-y-2 border-[#92400e]/30 mr-8 rounded-l-md shadow-inner"
+          ></div>
+        </div>
+        <div
+          id="divine-crack"
+          class="absolute top-0 bottom-0 left-1/2 w-[2px] bg-[#fcd34d] divine-light-crack z-20 -translate-x-1/2"
+        ></div>
+        <div
+          id="door-right"
+          class="door-panel door-right absolute top-0 right-0 w-1/2 h-full z-10 flex justify-start items-center border-l-[4px] border-[#78350f]/50"
+        >
+          <div
+            class="h-3/4 w-16 border-r-2 border-y-2 border-[#92400e]/30 ml-8 rounded-r-md shadow-inner"
+          ></div>
+        </div>
+      </div>
+
+      <div id="preloader-progress-wrap" aria-hidden="true">
+        <span>Entering the Sanctum</span>
+        <div id="preloader-bar-outer">
+          <div id="preloader-bar-inner"></div>
+        </div>
+      </div>
+    </div>
+
+    <canvas id="cosmos-canvas" aria-hidden="true"></canvas>
+
+    <main id="smooth-wrapper" class="relative z-0 opacity-0">
+      <nav id="navbar" role="navigation" aria-label="Main navigation">
+        <a href="#" class="nav-logo" aria-label="Somnath Temple Home">
+          <img
+            src="/logo.png"
+            alt="Somnath Trust Logo"
+            class="nav-logo-icon"
+            style="
+              border-radius: 50%;
+              object-fit: cover;
+              width: 44px;
+              height: 44px;
+              background: white;
+            "
+          />
+          <span class="nav-logo-text">SOMNATH</span>
+        </a>
+
+        <ul class="nav-links" role="list">
+          <li><a href="#about">The Temple History</a></li>
+          <li><a href="#architecture">Architecture</a></li>
+          <li><a href="#darshan">360° Darshan</a></li>
+          <li><a href="#visit">Plan Visit</a></li>
+        </ul>
+
+        <a href="#visit" class="nav-cta">Book Aarti →</a>
+      </nav>
+
+      <section id="hero" aria-label="Somnath Temple Hero">
+        <p class="hero-eyebrow" aria-label="Om Namah Shivaya">ॐ नमः शिवाय</p>
+        <h1 class="hero-title" aria-label="Somnath">SOMNATH</h1>
+        <p class="hero-title-sub">
+          The Eternal Shrine — First Among the Twelve Jyotirlingas
+        </p>
+        <span class="hero-divider" aria-hidden="true"></span>
+        <p class="hero-mantra" aria-label="Har Har Mahadev">हर हर महादेव</p>
+        <div class="hero-cta-wrap">
+          <a href="#darshan" class="btn-primary">Begin Darshan</a>
+          <a href="#about" class="btn-secondary">Explore The Legend</a>
+        </div>
+        <div class="scroll-hint" aria-hidden="true">
+          <span>Scroll to Discover</span>
+          <div class="scroll-line"></div>
+        </div>
+      </section>
+
+      <section id="about" aria-label="History of Somnath Temple">
+        <div class="max-w-7xl mx-auto px-8 lg:px-16 py-20 lg:py-32">
+          <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+            <div class="about-text-content text-center lg:text-left">
+              <p class="section-label reveal">— The Sacred Story</p>
+              <h2 class="section-title reveal">The Shrine Eternal</h2>
+              <span class="gold-rule reveal mx-auto lg:mx-0" aria-hidden="true"></span>
+              <p class="section-body reveal mx-auto lg:mx-0">
+                Situated at Prabhas Patan on the western coast of Gujarat, the
+                Somnath Temple is believed to be the first among the twelve
+                Jyotirlinga shrines of Shiva. It is a highly revered pilgrimage
+                site that has stood as a symbol of India's eternal spirit.
+              </p>
+              <p class="section-body reveal" style="margin-top: 1.5rem">
+                According to ancient texts, the Moon God (Soma) was cursed by
+                his father-in-law Daksha to lose his luster. He bathed in the
+                Sarasvati River at this very site to regain it. In reverence,
+                Soma built the original temple in gold. It was subsequently
+                built in silver by Ravana, in wood by Krishna, and in stone by
+                Bhimdev.
+              </p>
+              <p class="section-body reveal" style="margin-top: 1.5rem">
+                The temple has withstood the ravages of time and history. It was
+                destroyed and looted at least seventeen times by various
+                invaders, most notably by Mahmud of Ghazni in 1024 CE. Yet, each
+                time it fell, the devotion of the people resurrected it, making
+                it the ultimate symbol of resilience. The present magnificent
+                structure was rebuilt post-independence under the vision of
+                Sardar Vallabhbhai Patel.
+              </p>
+            </div>
+            <div class="about-image-wrapper reveal relative">
+              <img src="/images/authentic_jyotirlinga.png" alt="The Authentic Somnath Jyotirlinga" class="w-full h-auto max-h-[80vh] rounded-2xl shadow-[0_0_80px_rgba(200,146,42,0.15)] object-contain border border-[#c8922a]/20" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-2xl pointer-events-none"></div>
+            </div>
+          </div>
+
+          <div class="stats-grid" style="margin-top: 4rem">
+            <div class="stat-card">
+              <div class="stat-number">7+</div>
+              <div class="stat-label">
+                Major destructions and resurrections throughout history
+              </div>
+            </div>
+            <div class="stat-card" style="transition-delay: 0.1s">
+              <div class="stat-number">1951</div>
+              <div class="stat-label">
+                Year of the final Pran-Pratistha by Dr. Rajendra Prasad
+              </div>
+            </div>
+            <div class="stat-card" style="transition-delay: 0.2s">
+              <div class="stat-number">First</div>
+              <div class="stat-label">
+                The eldest and most sacred of the twelve Aadi Jyotirlingas
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="architecture" aria-label="Temple Architecture" style="width: 100%; display: flex; justify-content: center; text-align: center;">
+        <div style="width: 100%; max-width: 1200px; margin: 0 auto; padding: 4rem 2rem;">
+          <div class="text-center mb-12">
+            <p class="section-label reveal">— Architectural Marvel</p>
+            <h2 class="section-title reveal">Kailash Mahameru Prasad</h2>
+            <span class="gold-rule reveal" style="margin: 1.5rem auto"></span>
+          </div>
+
+          <div class="grid lg:grid-cols-3 gap-12 items-stretch w-full">
+            <div class="visit-card reveal text-center flex flex-col items-center">
+              <h4 style="color: var(--color-gold-bright); margin-bottom: 1.5rem">
+                Chaulukya Style
+              </h4>
+              <p>
+                The present temple is built in the Chalukya (Solanki) style of
+                temple architecture, reflecting the skill of the Sompuras,
+                Gujarat's master masons. It features exquisite carvings, a
+                majestic Sabha Mandap, and a towering Shikhara.
+              </p>
+            </div>
+            <div
+              class="visit-card reveal text-center flex flex-col items-center"
+              style="transition-delay: 0.1s"
+            >
+              <h4 style="color: var(--color-gold-bright); margin-bottom: 1.5rem">
+                The Baan Stambh
+              </h4>
+              <p>
+                The Arrow Pillar stands on the sea-protection wall. It bears an
+                ancient inscription stating that it stands at a point on the
+                Indian landmass intersecting a straight line spanning the oceans
+                all the way to Antarctica, with no land in between.
+              </p>
+            </div>
+            <div
+              class="visit-card reveal text-center flex flex-col items-center"
+              style="transition-delay: 0.2s"
+            >
+              <h4 style="color: var(--color-gold-bright); margin-bottom: 1.5rem">
+                Triveni Sangam
+              </h4>
+              <p>
+                Located near the confluence of three holy rivers: Kapila, Hiran,
+                and the mythical Sarasvati. The coastal geography adds immense
+                spiritual weight to the temple's profound aura.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery" aria-label="Temple Gallery">
+        <div class="px-8 lg:px-16 mb-8">
+          <p class="section-label reveal">— Visual Darshan</p>
+          <h2 class="section-title reveal">The Many Faces<br />of Mahadev</h2>
+        </div>
+        <div
+          class="horizontal-scroll-section"
+          role="region"
+          aria-label="Image gallery"
+        >
+          <div class="gallery-track" id="gallery-track">
+            <div class="gallery-card">
+              <img
+                src="/images/shikhara_closeup.png"
+                alt="Somnath Temple Profile"
+                class="w-full h-full object-cover block transition-transform duration-700 hover:scale-105"
+              />
+              <div class="gallery-card-overlay">
+                <h3>The Solanki Shikhara</h3>
+                <p>Rising 155 feet towards the heavens</p>
+              </div>
+            </div>
+
+            <div class="gallery-card">
+              <img
+                src="/images/bhalka_tirth.png"
+                alt="Bhalka Tirth"
+                class="w-full h-full object-cover block transition-transform duration-700 hover:scale-105"
+              />
+              <div class="gallery-card-overlay">
+                <h3>Bhalka Tirth</h3>
+                <p>Where Lord Krishna departed to his divine abode</p>
+              </div>
+            </div>
+
+            <div class="gallery-card">
+              <img
+                src="/images/arabian_sea.png"
+                alt="Arabian Sea Waves"
+                class="w-full h-full object-cover block transition-transform duration-700 hover:scale-105"
+              />
+              <div class="gallery-card-overlay">
+                <h3>The Arabian Sea</h3>
+                <p>Singing eternal praises at the feet of the Lord</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="darshan" aria-label="360 Degree Darshan">
+        <div id="darshan-header" class="text-center">
+          <p class="section-label reveal" style="text-align: center">
+            — 360° Darshan
+          </p>
+          <h2 class="section-title reveal" style="text-align: center">
+            Step Inside<br />the Sanctum Sanctorum
+          </h2>
+          <span
+            class="gold-rule"
+            style="
+              margin: 1.5rem auto;
+              display: block;
+              background: linear-gradient(
+                90deg,
+                transparent,
+                var(--color-gold-core),
+                transparent
+              );
+              width: 120px;
+            "
+            aria-hidden="true"
+          ></span>
+          <p
+            class="section-body reveal"
+            style="text-align: center; margin: 0 auto; max-width: 600px"
+          >
+            Experience the sacred grounds of Somnath as though you stand before
+            the sea, the sky, and the eternal Jyotirling — without leaving this
+            moment.
+          </p>
+        </div>
+
+        <div
+          id="panorama-container"
+          role="region"
+          aria-label="360 degree panoramic view"
+        >
+          <div
+            id="darshan-gate"
+            onclick="enterDarshan()"
+            role="button"
+            tabindex="0"
+            aria-label="Click to begin 360 degree darshan"
+            onkeypress="if (event.key === 'Enter') enterDarshan();"
+          >
+            <div class="gate-icon" aria-hidden="true">ॐ</div>
+            <h3>Begin 360° Darshan</h3>
+            <p>Click to enter the sacred grounds</p>
+          </div>
+          <div
+            id="google-360-viewer"
+            class="w-full h-full absolute inset-0 hidden"
+          ></div>
+        </div>
+
+        <div style="text-align: center; padding: 1.5rem 2rem; opacity: 0.5">
+          <p
+            style="
+              font-family: var(--font-temple);
+              font-size: 0.6rem;
+              letter-spacing: 0.3em;
+              color: var(--color-gold-core);
+            "
+          >
+            DRAG TO LOOK AROUND — SCROLL TO ZOOM — PRESS ESC TO EXIT FULLSCREEN
+          </p>
+        </div>
+      <section id="visit" aria-label="Plan Your Visit">
+        <div class="visit-inner">
+          <div class="text-center lg:text-left">
+            <p class="section-label reveal">— Plan Your Pilgrimage</p>
+            <h2 class="section-title reveal">
+              Come, as Soma Came —<br />Seeking Grace
+            </h2>
+            <span class="gold-rule reveal mx-auto lg:mx-0" aria-hidden="true"></span>
+            <p class="section-body reveal mx-auto lg:mx-0">
+              The doors of Somnath are open to every devotee. Located at the
+              serene coast of Prabhas Patan, the temple invites millions
+              annually to witness its profound spiritual energy.
+            </p>
+            <div class="visit-info-grid" style="margin-top: 2.5rem">
+              <div class="visit-card reveal">
+                <div class="visit-card-icon" aria-hidden="true">📍</div>
+                <h4>Location</h4>
+                <p>
+                  Shree Somnath Trust<br />
+                  Prabhas Patan, Veraval<br />
+                  Gujarat — 362268
+                </p>
+              </div>
+              <div class="visit-card reveal">
+                <div class="visit-card-icon" aria-hidden="true">🕐</div>
+                <h4>Temple Hours</h4>
+                <p>
+                  Darshan: 6:00 AM — 9:30 PM<br />
+                  Open every day of the year
+                </p>
+              </div>
+              <div class="visit-card reveal" style="grid-column: span 2">
+                <div class="visit-card-icon" aria-hidden="true">✈️</div>
+                <h4>How to Reach</h4>
+                <p style="font-size: 0.85rem; line-height: 1.6;">
+                  <strong>Air:</strong> Diu Airport (85km), Rajkot Airport (190km)<br />
+                  <strong>Rail:</strong> Somnath Railway Station (1km), Veraval Junction (7km)<br />
+                  <strong>Road:</strong> Well connected by state transport buses and private AC coaches from Ahmedabad, Rajkot, and Dwarka.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <p class="section-label reveal" style="margin-bottom: 1.5rem">
+              — Daily Aarti & Event Schedule
+            </p>
+            <ul class="aarti-list reveal" aria-label="Daily Aarti timings">
+              <li>
+                <span class="aarti-name">Mangala Aarti</span>
+                <span class="aarti-time">6:00 AM</span>
+              </li>
+              <li>
+                <span class="aarti-name">Shringar Aarti</span>
+                <span class="aarti-time">7:00 AM</span>
+              </li>
+              <li>
+                <span class="aarti-name">Sandhya Aarti</span>
+                <span class="aarti-time">7:00 PM</span>
+              </li>
+              <li>
+                <span class="aarti-name">Light & Sound Show "Jay Somnath"</span>
+                <span class="aarti-time">8:00 PM to 9:00 PM (Daily)</span>
+              </li>
+              <li>
+                <span class="aarti-name">Live Darshan Stream</span>
+                <span class="aarti-time">Available via Somnath Trust Website</span>
+              </li>
+            </ul>
+            
+            <div class="mt-12 reveal">
+              <div class="relative group overflow-hidden rounded-2xl border border-[#c8922a]/30 shadow-2xl h-full min-h-[400px]">
+                <img 
+                  src="/images/jyotirling_temple.png" 
+                  alt="The Magnificent Somnath Temple Exterior" 
+                  class="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-110" 
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
+                <div class="absolute bottom-6 left-6">
+                  <p class="section-label" style="margin-bottom: 0; opacity: 1; font-size: 0.5rem;">— Eternal Presence</p>
+                  <h3 class="section-title" style="font-size: 1.2rem; margin-bottom: 0; opacity: 1;">The Shrine Eternal</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer role="contentinfo">
+        <div class="footer-top max-w-7xl mx-auto grid lg:grid-cols-3 gap-12 text-left mb-16">
+          <div class="footer-brand">
+            <div class="om-footer" style="opacity: 1; margin-bottom: 1.5rem; text-align: left;">ॐ नमः शिवाय</div>
+            <p style="color: var(--color-ash-light); opacity: 0.7; font-size: 1rem; line-height: 1.8;">
+              Somnath — The Eternal Shrine. The first among the twelve Jyotirlingas, 
+              standing as a symbol of resilience and eternal devotion on the 
+              shores of the Arabian Sea.
+            </p>
+          </div>
+          
+          <div class="footer-nav">
+            <h4 style="font-family: var(--font-temple); color: var(--color-gold-bright); margin-bottom: 1.5rem; letter-spacing: 0.1em;">Quick Links</h4>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem;">
+              <li><a href="#about" style="color: var(--color-ash-light); text-decoration: none; font-family: var(--font-temple); font-size: 0.75rem; letter-spacing: 0.1em; transition: color 0.3s;" onmouseover="this.style.color='var(--color-gold-bright)'" onmouseout="this.style.color='var(--color-ash-light)'">THE TEMPLE HISTORY</a></li>
+              <li><a href="#architecture" style="color: var(--color-ash-light); text-decoration: none; font-family: var(--font-temple); font-size: 0.75rem; letter-spacing: 0.1em; transition: color 0.3s;" onmouseover="this.style.color='var(--color-gold-bright)'" onmouseout="this.style.color='var(--color-ash-light)'">ARCHITECTURE</a></li>
+              <li><a href="#darshan" style="color: var(--color-ash-light); text-decoration: none; font-family: var(--font-temple); font-size: 0.75rem; letter-spacing: 0.1em; transition: color 0.3s;" onmouseover="this.style.color='var(--color-gold-bright)'" onmouseout="this.style.color='var(--color-ash-light)'">360° DARSHAN</a></li>
+              <li><a href="#visit" style="color: var(--color-ash-light); text-decoration: none; font-family: var(--font-temple); font-size: 0.75rem; letter-spacing: 0.1em; transition: color 0.3s;" onmouseover="this.style.color='var(--color-gold-bright)'" onmouseout="this.style.color='var(--color-ash-light)'">PLAN YOUR VISIT</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-contact">
+            <h4 style="font-family: var(--font-temple); color: var(--color-gold-bright); margin-bottom: 1.5rem; letter-spacing: 0.1em;">Contact</h4>
+            <p style="color: var(--color-ash-light); opacity: 0.6; font-size: 0.95rem; margin-bottom: 1rem;">
+              Shree Somnath Trust, Prabhas Patan, Veraval, Gujarat, India.
+            </p>
+            <p style="color: var(--color-gold-core); font-family: var(--font-temple); font-size: 0.8rem; letter-spacing: 0.1em;">
+              Har Har Mahadev
+            </p>
+          </div>
+        </div>
+
+        <div class="footer-bottom pt-8 border-t border-[#c8922a]/10">
+          <p>© 2026 SHREE SOMNATH TRUST · ALL SPIRITUAL RIGHTS RESERVED</p>
+          <p style="margin-top: 1rem; opacity: 0.3; font-style: italic; font-size: 0.7rem;">
+            "Designed as an offering to Mahadev — the Eternal, the Infinite, the Ever-Present"
+          </p>
+        </div>
+      </footer>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
